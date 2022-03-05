@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorToView()
+        setValue(toLabel: redLabel, fromSlider: redSlider)
+        setValue(toLabel: greenLabel, fromSlider: greenSlider)
+        setValue(toLabel: blueLabel, fromSlider: blueSlider)
     }
 
     @IBAction func redSliderChanged() {
