@@ -119,9 +119,12 @@
                     </view>
                     <connections>
                         <outlet property="blueLabel" destination="34o-1g-efS" id="DGm-2v-oMI"/>
+                        <outlet property="blueSlider" destination="TRl-JF-8Ra" id="OQ5-rr-ewm"/>
                         <outlet property="colorView" destination="qqh-np-PKE" id="usz-Z0-DW6"/>
                         <outlet property="greenLabel" destination="hTg-W6-4cc" id="Lj0-TC-yfD"/>
+                        <outlet property="greenSlider" destination="n1j-nb-CC1" id="tel-ap-yAA"/>
                         <outlet property="redLabel" destination="Dk0-bA-jSG" id="hxm-R4-ulW"/>
+                        <outlet property="redSlider" destination="hiu-L8-X42" id="AI4-Fr-GKP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
