@@ -21,14 +21,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setColorToView()
-        setValue(toLabel: redLabel, fromSlider: redSlider)
-        setValue(toLabel: greenLabel, fromSlider: greenSlider)
-        setValue(toLabel: blueLabel, fromSlider: blueSlider)
+        redLabel.text = string(fromSlider: redSlider)
+        greenLabel.text = string(fromSlider: greenSlider)
+        blueLabel.text = string(fromSlider: blueSlider)
     }
 
     @IBAction func sliderChanged(_ sender: UISlider) {
         setColorToView()
-        setValue(toLabel: redLabel, fromSlider: sender)
+        switch sender.tag {
+        case 0:
+            redLabel.text = string(fromSlider: sender)
+        case 1:
+            greenLabel.text = string(fromSlider: sender)
+        default:
+            blueLabel.text = string(fromSlider: sender)
+        }
     }
 
     private func setColorToView() {
@@ -39,8 +46,8 @@ class ViewController: UIViewController {
             alpha: 1
         )
     }
-    private func setValue(toLabel label: UILabel, fromSlider slider: UISlider) {
-        label.text = String(format: "%.2f", slider.value)
+    private func string(fromSlider slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
     }
 }
 
