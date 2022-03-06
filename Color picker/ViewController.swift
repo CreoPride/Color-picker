@@ -26,17 +26,9 @@ class ViewController: UIViewController {
         setValue(toLabel: blueLabel, fromSlider: blueSlider)
     }
 
-    @IBAction func redSliderChanged() {
+    @IBAction func sliderChanged(_ sender: UISlider) {
         setColorToView()
-        setValue(toLabel: redLabel, fromSlider: redSlider)
-    }
-    @IBAction func greenSliderChanged() {
-        setColorToView()
-        setValue(toLabel: greenLabel, fromSlider: greenSlider)
-    }
-    @IBAction func blueSliderChanged() {
-        setColorToView()
-        setValue(toLabel: blueLabel, fromSlider: blueSlider)
+        setValue(toLabel: redLabel, fromSlider: sender)
     }
 
     private func setColorToView() {
