@@ -31,7 +31,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bV0-To-LpA"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bV0-To-LpA" firstAttribute="trailing" secondItem="rha-2o-aFb" secondAttribute="trailing" constant="15" id="DBe-7r-H4v"/>
                             <constraint firstItem="rha-2o-aFb" firstAttribute="top" secondItem="bV0-To-LpA" secondAttribute="top" constant="21" id="k2A-Sb-kjd"/>
@@ -57,10 +57,16 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.vorderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-1X-Ipl">
-                                <rect key="frame" x="16" y="178" width="292" height="122"/>
+                                <rect key="frame" x="16" y="148" width="292" height="122"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="XSA-Ma-rqS">
                                         <rect key="frame" x="0.0" y="6.5" width="60" height="108.5"/>
@@ -149,17 +155,26 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xIr-Da-zx1">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Kn2-UV-8gC"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cBB-j4-gTS">
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cBB-j4-gTS">
                                                 <rect key="frame" x="0.0" y="44" width="50" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hu7-0I-x4a"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRf-9W-0mK">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRf-9W-0mK">
                                                 <rect key="frame" x="0.0" y="88" width="50" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lpV-29-f4M"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -176,12 +191,13 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="HdV-qm-Qbj"/>
                                     <segue destination="9UD-Lx-LxN" kind="unwind" unwindAction="unwind:" id="UCn-MJ-uXg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hyd-RQ-YOE" firstAttribute="centerX" secondItem="XWz-1X-Ipl" secondAttribute="centerX" id="1IY-76-e1A"/>
                             <constraint firstItem="XWz-1X-Ipl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8J4-zo-fRh"/>
@@ -189,7 +205,7 @@
                             <constraint firstItem="qqh-np-PKE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="MWO-ib-yf2"/>
                             <constraint firstItem="qqh-np-PKE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O9i-Ts-LEX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qqh-np-PKE" secondAttribute="trailing" constant="16" id="Pbp-WZ-nno"/>
-                            <constraint firstItem="XWz-1X-Ipl" firstAttribute="top" secondItem="qqh-np-PKE" secondAttribute="bottom" constant="50" id="YME-Uu-WrR"/>
+                            <constraint firstItem="XWz-1X-Ipl" firstAttribute="top" secondItem="qqh-np-PKE" secondAttribute="bottom" constant="20" id="YME-Uu-WrR"/>
                             <constraint firstItem="qqh-np-PKE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.197044" id="cE6-gx-u7f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hyd-RQ-YOE" secondAttribute="bottom" constant="100" id="d9b-eU-BLp"/>
                         </constraints>
