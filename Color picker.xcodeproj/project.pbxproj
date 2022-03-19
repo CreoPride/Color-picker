@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		D104E2C127D3B65E00E4E3A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104E2C027D3B65E00E4E3A5 /* AppDelegate.swift */; };
 		D104E2C327D3B65E00E4E3A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104E2C227D3B65E00E4E3A5 /* SceneDelegate.swift */; };
-		D104E2C527D3B65E00E4E3A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104E2C427D3B65E00E4E3A5 /* ViewController.swift */; };
+		D104E2C527D3B65E00E4E3A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104E2C427D3B65E00E4E3A5 /* SettingsViewController.swift */; };
 		D104E2C827D3B65E00E4E3A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D104E2C627D3B65E00E4E3A5 /* Main.storyboard */; };
 		D104E2CA27D3B65F00E4E3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D104E2C927D3B65F00E4E3A5 /* Assets.xcassets */; };
 		D104E2CD27D3B65F00E4E3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D104E2CB27D3B65F00E4E3A5 /* LaunchScreen.storyboard */; };
+		D19ECBE327E5C65900C0506D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19ECBE227E5C65900C0506D /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D104E2BD27D3B65E00E4E3A5 /* Color picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D104E2C027D3B65E00E4E3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D104E2C227D3B65E00E4E3A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D104E2C427D3B65E00E4E3A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D104E2C427D3B65E00E4E3A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D104E2C727D3B65E00E4E3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D104E2C927D3B65F00E4E3A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D104E2CC27D3B65F00E4E3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D104E2CE27D3B65F00E4E3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D19ECBE227E5C65900C0506D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		D104E2BF27D3B65E00E4E3A5 /* Color picker */ = {
 			isa = PBXGroup;
 			children = (
-				D104E2C027D3B65E00E4E3A5 /* AppDelegate.swift */,
-				D104E2C227D3B65E00E4E3A5 /* SceneDelegate.swift */,
-				D104E2C427D3B65E00E4E3A5 /* ViewController.swift */,
-				D104E2C627D3B65E00E4E3A5 /* Main.storyboard */,
-				D104E2C927D3B65F00E4E3A5 /* Assets.xcassets */,
-				D104E2CB27D3B65F00E4E3A5 /* LaunchScreen.storyboard */,
-				D104E2CE27D3B65F00E4E3A5 /* Info.plist */,
+				D19ECBDF27E5A07700C0506D /* ViewControllers */,
+				D19ECBE027E5A09600C0506D /* Storyboards */,
+				D19ECBE127E5A0FC00C0506D /* Resourses */,
+				D19ECBDE27E5A06C00C0506D /* App */,
 			);
 			path = "Color picker";
+			sourceTree = "<group>";
+		};
+		D19ECBDE27E5A06C00C0506D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D104E2C027D3B65E00E4E3A5 /* AppDelegate.swift */,
+				D104E2C227D3B65E00E4E3A5 /* SceneDelegate.swift */,
+				D104E2CE27D3B65F00E4E3A5 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D19ECBDF27E5A07700C0506D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D19ECBE227E5C65900C0506D /* MainViewController.swift */,
+				D104E2C427D3B65E00E4E3A5 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D19ECBE027E5A09600C0506D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D104E2C627D3B65E00E4E3A5 /* Main.storyboard */,
+				D104E2CB27D3B65F00E4E3A5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D19ECBE127E5A0FC00C0506D /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				D104E2C927D3B65F00E4E3A5 /* Assets.xcassets */,
+			);
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D104E2C527D3B65E00E4E3A5 /* ViewController.swift in Sources */,
+				D104E2C527D3B65E00E4E3A5 /* SettingsViewController.swift in Sources */,
 				D104E2C127D3B65E00E4E3A5 /* AppDelegate.swift in Sources */,
 				D104E2C327D3B65E00E4E3A5 /* SceneDelegate.swift in Sources */,
+				D19ECBE327E5C65900C0506D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +327,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z445WR9458;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Color picker/Info.plist";
+				INFOPLIST_FILE = "Color picker/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +355,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z445WR9458;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Color picker/Info.plist";
+				INFOPLIST_FILE = "Color picker/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
