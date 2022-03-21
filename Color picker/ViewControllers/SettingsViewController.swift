@@ -128,11 +128,6 @@ extension SettingsViewController: UITextFieldDelegate {
         }
         setColor()
     }
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
 }
 
 //MARK: Done button
